@@ -16,7 +16,7 @@ The previous chapter was more general to all programming languages. Since the re
 <hr>
 
 ### 1b.1 - Complex Data Types
-A lot of programming languages have the complex data types **hashmap**/**dictionary** */ and **array**. An array, as explained before, just contains multiple values in an ordered list. A hashmap maps "keys" to "values". For example, in javascript
+A lot of programming languages have the complex data types **hashmap**/**dictionary** and **array**. An array, as explained before, just contains multiple values in an ordered list. A hashmap maps "keys" to "values". For example, in javascript
 ```js
 let Player = {
     "health": 100, // Key is "health", value is 100

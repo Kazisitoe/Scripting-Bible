@@ -53,7 +53,7 @@ playerTable["cute"] = true -- playerTable is now { ["health"] = 100, ["name"] = 
 ```
 <hr>
 
-### 1b.2 References
+### 1b.2 - References
 Lua doesn't have references for the most part. However, variables set to tables will always act as references:
 ```lua
 local playerTable = {

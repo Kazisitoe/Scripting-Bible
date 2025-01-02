@@ -115,6 +115,8 @@ end
 ```
 This code will create a ``currentNumber`` variable that only exists within the ``for`` loop and then sets it to ``1``. It will then run the code within it, and increase it by ``1``. It will keep doing this until it reaches ``10``, where it will then iterate one final time. Like ``while`` loops, ``for`` loops can be prematurely ended with ``break``.
 
+<hr>
+
 ### 2.5.1 - Generic For Loop
 The second type of ``for`` loop is definitely the most complicated method of iterating. The easiest way to do it is by analyzing an example:
 ```lua
@@ -135,6 +137,6 @@ end
 ```
 Now we gotta break down how this all works. So, firstly, we can tell that this is a generic ``for`` as it uses ``in`` and an iterator function. The iteration function will then be called, and the arguments passed will be whatever is to the right of the indicator (``10``) and whatever is returned by the previous iteration (since there is no previous iteration, it will just be ``nil``). This means in the first iteration, it calls ``iterator(10, nil)``. The first line of the iterator function changes ``currentValue`` to be ``currentValue and currentValue + 1 or 1``. Substituting in its value for this iteration gives us ``nil and nil + 1 or 1`` (which can be read as ``(nil and nil + 1) or 1``). This simplifies to ``nil or 1`` which gives ``1``. It then checks ``currentValue > limit``, which would be ``1 > 10``, which is false, meaning the ``if`` won't run. Finally, it returns ``currentValue`` which is again, now ``1``. This return value gets put into ``currentNumber``, and then the contents of the for loop run, printing out ``"Counted" 1``. The for loop then iterates again, using the previous iteration's output (``1``) as an additional argument for ``iterator``, meaning that this time it now calls ``iterator(10, 1)``. This means that this time ``limit`` is still ``10`` and ``currentValue`` is now 1, resulting in ``currentValue and currentValue + 1 or 1`` giving ``1 and 1 + 1 or 1``, or ``1 and 2 or 1``, finally giving 2. The condition for the ``if`` statement still is not met, meaning that it returns ``currentValue``, which is now ``2``. This gets fed into ``currentNumber``, it runs the code inside the ``for`` loop again, and this keeps repeating until ``iterator`` eventually returns nil.
 
-<br>
+<hr>
 
 That was a lot of information wow. Good job princesses!

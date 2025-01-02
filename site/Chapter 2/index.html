@@ -581,6 +581,8 @@ The way the loop works this time is that it will firstly <em>always</em> run, as
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kr">end</span>
 </span></code></pre></div>
 This code will create a <code>currentNumber</code> variable that only exists within the <code>for</code> loop and then sets it to <code>1</code>. It will then run the code within it, and increase it by <code>1</code>. It will keep doing this until it reaches <code>10</code>, where it will then iterate one final time. Like <code>while</code> loops, <code>for</code> loops can be prematurely ended with <code>break</code>.</p>
+<hr>
+
 <h3 id="251-generic-for-loop">2.5.1 - Generic For Loop</h3>
 <p>The second type of <code>for</code> loop is definitely the most complicated method of iterating. The easiest way to do it is by analyzing an example:
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">iterator</span><span class="p">(</span><span class="n">limit</span><span class="p">,</span> <span class="n">currentValue</span><span class="p">)</span>
@@ -599,7 +601,8 @@ This code will create a <code>currentNumber</code> variable that only exists wit
 </span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="kr">end</span>
 </span></code></pre></div>
 Now we gotta break down how this all works. So, firstly, we can tell that this is a generic <code>for</code> as it uses <code>in</code> and an iterator function. The iteration function will then be called, and the arguments passed will be whatever is to the right of the indicator (<code>10</code>) and whatever is returned by the previous iteration (since there is no previous iteration, it will just be <code>nil</code>). This means in the first iteration, it calls <code>iterator(10, nil)</code>. The first line of the iterator function changes <code>currentValue</code> to be <code>currentValue and currentValue + 1 or 1</code>. Substituting in its value for this iteration gives us <code>nil and nil + 1 or 1</code> (which can be read as <code>(nil and nil + 1) or 1</code>). This simplifies to <code>nil or 1</code> which gives <code>1</code>. It then checks <code>currentValue &gt; limit</code>, which would be <code>1 &gt; 10</code>, which is false, meaning the <code>if</code> won't run. Finally, it returns <code>currentValue</code> which is again, now <code>1</code>. This return value gets put into <code>currentNumber</code>, and then the contents of the for loop run, printing out <code>"Counted" 1</code>. The for loop then iterates again, using the previous iteration's output (<code>1</code>) as an additional argument for <code>iterator</code>, meaning that this time it now calls <code>iterator(10, 1)</code>. This means that this time <code>limit</code> is still <code>10</code> and <code>currentValue</code> is now 1, resulting in <code>currentValue and currentValue + 1 or 1</code> giving <code>1 and 1 + 1 or 1</code>, or <code>1 and 2 or 1</code>, finally giving 2. The condition for the <code>if</code> statement still is not met, meaning that it returns <code>currentValue</code>, which is now <code>2</code>. This gets fed into <code>currentNumber</code>, it runs the code inside the <code>for</code> loop again, and this keeps repeating until <code>iterator</code> eventually returns nil.</p>
-<p><br></p>
+<hr>
+
 <p>That was a lot of information wow. Good job princesses!</p>
 
 

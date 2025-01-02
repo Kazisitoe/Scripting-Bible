@@ -21,13 +21,13 @@ A lot of programming languages have the complex data types **hashmap**/**diction
 let Player = {
     "health": 100, // Key is "health", value is 100
     "name": "Kazi", // Key is "name", value is "Kazi"
-    "age": 18, //Key is "age", value is 18
+    "age": 18, // Key is "age", value is 18
 
 }
 ```
 You can then index it to get values (e.g. ``Player["health"]`` will be ``100``)
 
-Instead of having structs and arrays, lua has **tables** which can represent both:
+Instead of having dictionaries and arrays, lua has **tables** which can represent both:
 ```lua
 local arrayTable = {5, "something", false}
 local playerTable = {

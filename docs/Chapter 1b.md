@@ -67,6 +67,7 @@ local playerTable = {
 local playerNamedKazi = playerTable
 playerNamedKazi["health"] = 80 -- This affects playerTable!! Now they will both be { ["health"] = 80, ["name"] = "Kazi", ["age"] = 18, ["cute"] = true, }
 ```
+
 <hr>
 
 Wow! We good for progressing now!

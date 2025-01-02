@@ -423,27 +423,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#while-loop" class="md-nav__link">
+  <a href="#24-while-loop" class="md-nav__link">
     <span class="md-ellipsis">
-      While Loop
+      2.4 - While Loop
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-loop" class="md-nav__link">
+  <a href="#25-for-loop" class="md-nav__link">
     <span class="md-ellipsis">
-      For Loop
+      2.5 - For Loop
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#generic-for-loop" class="md-nav__link">
+  <a href="#251-generic-for-loop" class="md-nav__link">
     <span class="md-ellipsis">
-      Generic For Loop
+      2.5.1 - Generic For Loop
     </span>
   </a>
   
@@ -547,7 +547,7 @@ The function will first on the last line run with the argument <code>1</code>, m
 </blockquote>
 <hr>
 
-<h3 id="while-loop">While Loop</h3>
+<h3 id="24-while-loop">2.4 - While Loop</h3>
 <p>Generally, for something as simple as this, a loop is prefered. The <code>while</code> loop repeatedly evaluates a condition and runs code until thaat condition is falsey:
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">local</span> <span class="n">currentNumber</span> <span class="o">=</span> <span class="mi">1</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kr">while</span> <span class="n">currentNumber</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="kr">do</span>
@@ -574,14 +574,14 @@ The way this code works is that it first evaluates <code>currentNumber &lt;= 10<
 The way the loop works this time is that it will firstly <em>always</em> run, as the condition we gave it is forever just <code>true</code>. It will then evaluate <code>currentNumber &gt;= 10</code> <em>within</em> the loop. As <code>1 &gt;= 10</code> is <code>false</code> which is falsey, what's inside of the <code>if</code> statement won't run and it will not break. <code>currentNumber</code> then is increased and the loop runs again. It will keep doing this until <code>currentNumber &gt;= 10</code> is <code>true</code>, where it will then finally break, ending before <code>currentNumber</code> can be set to 11.</p>
 <hr>
 
-<h3 id="for-loop">For Loop</h3>
+<h3 id="25-for-loop">2.5 - For Loop</h3>
 <p>There are two types of <code>for</code> loops in Lua, one that simply counts a variable upwards until it reaches a certain value (exactly what we want for this) called the <strong>numeric for</strong>, and one that uses an <strong>iterator function</strong> (this one's more complicated) called the <strong>generic for</strong>. The first type works like this:
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kr">for</span> <span class="n">currentNumber</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span> <span class="kr">do</span> <span class="c1">--1, 10, 1 means start at 1, stop at 10, increase by 1 every iteration. If a third number is not provided, it will automatically assume it is 1</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Counted&quot;</span><span class="p">,</span> <span class="n">currentNumber</span><span class="p">)</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kr">end</span>
 </span></code></pre></div>
 This code will create a <code>currentNumber</code> variable that only exists within the <code>for</code> loop and then sets it to <code>1</code>. It will then run the code within it, and increase it by <code>1</code>. It will keep doing this until it reaches <code>10</code>, where it will then iterate one final time. Like <code>while</code> loops, <code>for</code> loops can be prematurely ended with <code>break</code>.</p>
-<h3 id="generic-for-loop">Generic For Loop</h3>
+<h3 id="251-generic-for-loop">2.5.1 - Generic For Loop</h3>
 <p>The second type of <code>for</code> loop is definitely the most complicated method of iterating. The easiest way to do it is by analyzing an example:
 <div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">iterator</span><span class="p">(</span><span class="n">limit</span><span class="p">,</span> <span class="n">currentValue</span><span class="p">)</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">currentValue</span> <span class="o">=</span> <span class="n">currentValue</span> <span class="ow">and</span> <span class="n">currentValue</span> <span class="o">+</span> <span class="mi">1</span> <span class="ow">or</span> <span class="mi">1</span>

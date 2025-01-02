@@ -75,7 +75,7 @@ The function will first on the last line run with the argument ``1``, meaning th
 
 <hr>
 
-### While Loop
+### 2.4 - While Loop
 Generally, for something as simple as this, a loop is prefered. The ``while`` loop repeatedly evaluates a condition and runs code until thaat condition is falsey:
 ```lua
 local currentNumber = 1
@@ -106,7 +106,7 @@ The way the loop works this time is that it will firstly *always* run, as the co
 
 <hr>
 
-### For Loop
+### 2.5 - For Loop
 There are two types of ``for`` loops in Lua, one that simply counts a variable upwards until it reaches a certain value (exactly what we want for this) called the **numeric for**, and one that uses an **iterator function** (this one's more complicated) called the **generic for**. The first type works like this:
 ```lua
 for currentNumber = 1, 10, 1 do --1, 10, 1 means start at 1, stop at 10, increase by 1 every iteration. If a third number is not provided, it will automatically assume it is 1
@@ -115,7 +115,7 @@ end
 ```
 This code will create a ``currentNumber`` variable that only exists within the ``for`` loop and then sets it to ``1``. It will then run the code within it, and increase it by ``1``. It will keep doing this until it reaches ``10``, where it will then iterate one final time. Like ``while`` loops, ``for`` loops can be prematurely ended with ``break``.
 
-### Generic For Loop
+### 2.5.1 - Generic For Loop
 The second type of ``for`` loop is definitely the most complicated method of iterating. The easiest way to do it is by analyzing an example:
 ```lua
 local function iterator(limit, currentValue)

@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../Chapter%201/">
+        <link rel="prev" href="../Chapter%203/">
       
-      
-        <link rel="next" href="../Chapter%202/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Chapter 1b - Scripting Bible</title>
+        <title>Chapter 3b - Scripting Bible</title>
       
     
     
@@ -70,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basics-in-lua" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter 1b
+              Chapter 3b
             
           </span>
         </div>
@@ -207,11 +205,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../Chapter%201b/" class="md-tabs__link">
         
   
     
@@ -260,9 +256,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../Chapter%203b/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -353,30 +351,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Chapter 1b
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Chapter%201b/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,59 +363,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1b0-basic-programming-concepts-in-lua" class="md-nav__link">
-    <span class="md-ellipsis">
-      1b.0 - Basic Programming Concepts in Lua
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1b.0 - Basic Programming Concepts in Lua">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1b1-complex-data-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      1b.1 - Complex Data Types
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1b2-references" class="md-nav__link">
-    <span class="md-ellipsis">
-      1b.2 - References
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -486,10 +411,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Chapter%203b/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -498,6 +432,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -517,69 +452,78 @@
                   
 
 
-<style>
-
-code {
+<h1 id="_1"><style></h1>
+<p>code {
   white-space : pre-wrap !important;
   word-break: break-word;
-}
-
+}</p>
 </style>
-
-<h1 id="basics-in-lua">Basics in Lua</h1>
-<h2 id="1b0-basic-programming-concepts-in-lua">1b.0 - Basic Programming Concepts in Lua</h2>
-<p>The previous chapter was more general to all programming languages. Since the rest of this doc will be on lua specifically, I'll show how everything in the previous chapter works in lua. Well that's kind of a lie, it'll actually be Luau, Roblox's derivitive of lua. Luau has all the features of lua with some extra stuff on top of it.</p>
+<h1 id="state-and-behavior-object-oriented-programming">State and Behavior, Object Oriented Programming</h1>
+<h2 id="3b0-tips">3b.0 - Tips!</h2>
+<p>Here's just some misc advice, concepts, and stuff about lua I couldn't really fit anywhere else.</p>
 <hr>
 
-<h3 id="1b1-complex-data-types">1b.1 - Complex Data Types</h3>
-<p>A lot of programming languages have the complex data types <strong>hashmap</strong>/<strong>dictionary</strong> and <strong>array</strong>. An array, as explained before, just contains multiple values in an ordered list. A hashmap maps "keys" to "values". For example, in javascript
-<div class="language-js highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">Player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="s2">&quot;health&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="c1">// Key is &quot;health&quot;, value is 100</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="s2">&quot;name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Kazi&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Key is &quot;name&quot;, value is &quot;Kazi&quot;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="s2">&quot;age&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span><span class="w"> </span><span class="c1">// Key is &quot;age&quot;, value is 18</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
-</span></code></pre></div>
-You can then index it to get values (e.g. <code>Player["health"]</code> will be <code>100</code>)</p>
-<p>Instead of having dictionaries and arrays, lua has <strong>tables</strong> which can represent both:
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">arrayTable</span> <span class="o">=</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;something&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">}</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">local</span> <span class="n">playerTable</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">[</span><span class="s2">&quot;health&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Kazi&quot;</span><span class="p">,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
-</span></code></pre></div>
-An array table is just an automated way to do the following:
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">...,</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">...,</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">...,</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="p">...</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">}</span>
-</span></code></pre></div>
-You can modify the values inside of a table, or even add new ones:
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">arrayTable</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span> <span class="c1">-- arrayTable is now {5, &quot;something&quot;, true}</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">playerTable</span><span class="p">[</span><span class="s2">&quot;cute&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span> <span class="c1">-- playerTable is now { [&quot;health&quot;] = 100, [&quot;name&quot;] = &quot;Kazi&quot;, [&quot;age&quot;] = 18, [&quot;cute&quot;] = true, }</span>
+<h3 id="3b1-lua-stuff">3b.1 - Lua Stuff</h3>
+<p>In lua, you can simplify <code>x = x + 1</code> as <code>x += 1</code>. This applies for all operations.</p>
+<p>There are ternary operators in lua. They look similar to if statements, but they are NOT if statements, and instead of running code, they just select values. All ternary operations can be represented with boolean operations (<code>and</code>/<code>or</code>) but they are typically easier to follow along:
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="n">person</span> <span class="o">=</span> <span class="s2">&quot;Kazi&quot;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">local</span> <span class="n">description</span> <span class="o">=</span> <span class="kr">if</span> <span class="n">person</span> <span class="o">==</span> <span class="s2">&quot;Kazi&quot;</span> <span class="kr">then</span> <span class="s2">&quot;So so pretty and cute the best #1 etc&quot;</span> <span class="kr">elseif</span> <span class="n">person</span> <span class="o">==</span> <span class="s2">&quot;Calla&quot;</span> <span class="kr">then</span> <span class="s2">&quot;Alright I guess...&quot;</span> <span class="kr">else</span> <span class="s2">&quot;Mid&quot;</span>
 </span></code></pre></div></p>
+<details>
+<summary>What is decription equal to?</summary>
+"So so pretty and cute the best #1 etc"
+</details>
+
 <hr>
 
-<h3 id="1b2-references">1b.2 - References</h3>
-<p>Lua doesn't have references for the most part. However, variables set to tables will always act as references:
-<div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">local</span> <span class="n">playerTable</span> <span class="o">=</span> <span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="p">[</span><span class="s2">&quot;health&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Kazi&quot;</span><span class="p">,</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">[</span><span class="s2">&quot;cute&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+<h3 id="3b2-coding-tips">3b.2 Coding Tips</h3>
+<p>Don't use an if statement if you don't have to. Here's an example:
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">local</span> <span class="n">person</span> <span class="o">=</span> <span class="s2">&quot;Kazi&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">local</span> <span class="n">cuteness</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kr">if</span> <span class="n">person</span> <span class="o">==</span> <span class="s2">&quot;Kazi&quot;</span> <span class="kr">then</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">cuteness</span> <span class="o">=</span> <span class="mi">999999999</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kr">else</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">cuteness</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="kr">end</span>
+</span></code></pre></div>
+While this does work, it runs slower and takes longer to write than doing:
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">local</span> <span class="n">person</span> <span class="o">=</span> <span class="s2">&quot;Kazi&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">local</span> <span class="n">cuteness</span> <span class="o">=</span> <span class="n">person</span> <span class="o">==</span> <span class="s2">&quot;Kazi&quot;</span> <span class="ow">and</span> <span class="mi">999999999</span> <span class="ow">or</span> <span class="mi">0</span>
+</span></code></pre></div>
+or the equivilent with ternary operations. The practice of avoiding <strong>branches</strong>, of which the <code>if</code> statement is one of, is called <strong>branchless programming</strong>.</p>
+<p>On the topic of branches, try to avoid <code>if</code>-<code>else</code> spam:
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">if</span> <span class="p">...</span> <span class="kr">then</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kr">elseif</span> <span class="p">...</span> <span class="kr">then</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kr">elseif</span> <span class="p">...</span> <span class="kr">then</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kr">elseif</span> <span class="p">...</span> <span class="kr">then</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kr">elseif</span> <span class="p">...</span> <span class="kr">then</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kr">elseif</span> <span class="p">...</span> <span class="kr">then</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="kr">elseif</span> <span class="p">...</span> <span class="kr">then</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="kr">else</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="kr">end</span>
+</span></code></pre></div>
+This is some nasty yandev bs. Not only does it end up looking ugly as shit, it's also slow. And God forbid only the last condition is met or it reaches the <code>else</code>, then it'd have checked every. single. condition before it. Which is slow as shit. If you're at this point, there's always 100% a better way to do it.</p>
+<p>Some more advice with branches: it is often easier to read conditions and change their order if you use guard clauses. Guard clauses reimagine things from being "if this condition is met, then do this" to being "if this condition isn't met, then don't do anything. Otherwise, continue as usual":
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">local</span> <span class="n">condition</span> <span class="o">=</span> <span class="kc">true</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">doesUseGuardClause</span><span class="p">()</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="kr">if</span> <span class="ow">not</span> <span class="n">condition</span> <span class="kr">then</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        <span class="kr">return</span> <span class="c1">-- Recall that returning will always just end a function right there</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="kr">end</span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Printed!&quot;</span><span class="p">)</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="kd">local</span> <span class="n">playerNamedKazi</span> <span class="o">=</span> <span class="n">playerTable</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">playerNamedKazi</span><span class="p">[</span><span class="s2">&quot;health&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">80</span> <span class="c1">-- This affects playerTable!! Now they will both be { [&quot;health&quot;] = 80, [&quot;name&quot;] = &quot;Kazi&quot;, [&quot;age&quot;] = 18, [&quot;cute&quot;] = true, }</span>
-</span></code></pre></div></p>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="kr">end</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kd">local</span> <span class="kr">function</span> <span class="nf">doesNotUseGuardClause</span><span class="p">()</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="kr">if</span> <span class="n">condition</span> <span class="kr">then</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Printed!&quot;</span><span class="p">)</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="kr">end</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="kr">end</span>
+</span></code></pre></div>
+By doing it this way, it's a lot easier to change the order of conditions and keep track of which conditions have been checked. This can be done within functions using <code>return</code> and loops using <code>continue</code> (<code>continue</code> forcibly stops the rest of the loop from running and does a new iteration).</p>
 <hr>
 
-<p>Wow! We good for progressing now!</p>
+<p>Now we ready to get into ROBLOX!! WOOOHOO!!!!!</p>
 
 
 

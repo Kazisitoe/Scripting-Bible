@@ -1,3 +1,12 @@
+<style>
+
+code {
+  white-space : pre-wrap !important;
+  word-break: break-word;
+}
+
+</style>
+
 # Game Development
 
 ## 4.0 - Roblox Game Development

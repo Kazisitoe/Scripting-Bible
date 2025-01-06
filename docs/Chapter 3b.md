@@ -1,4 +1,4 @@
-#<style>
+<style>
 
 code {
   white-space : pre-wrap !important;

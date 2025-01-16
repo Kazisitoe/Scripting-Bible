@@ -1,0 +1,894 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Chapter%201b/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Chapter 1 - Scripting Bible</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Verdana:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Verdana";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Scripting Bible" class="md-header__button md-logo" aria-label="Scripting Bible" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Scripting Bible
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Chapter 1
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Chapter%201b/" class="md-tabs__link">
+        
+  
+    
+  
+  Chapter 1b
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Chapter%202/" class="md-tabs__link">
+        
+  
+    
+  
+  Chapter 2
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Chapter%203/" class="md-tabs__link">
+        
+  
+    
+  
+  Chapter 3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Chapter%203b/" class="md-tabs__link">
+        
+  
+    
+  
+  Chapter 3b
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Chapter%204/" class="md-tabs__link">
+        
+  
+    
+  
+  Chapter 4
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Scripting Bible" class="md-nav__button md-logo" aria-label="Scripting Bible" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Scripting Bible
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-basic-cs-and-programming-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.0 - Basic CS and Programming Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.0 - Basic CS and Programming Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-terminology" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 - Terminology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-memory-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 - Memory Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 - Data Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 - Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 - Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#151-boolean-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.1 - Boolean Operations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%201b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1b
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%202/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%203/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%203b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3b
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chapter%204/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<style>
+
+code {
+  white-space : pre-wrap !important;
+  word-break: break-word;
+}
+
+</style>
+
+<h1 id="basics">Basics</h1>
+<h2 id="10-basic-cs-and-programming-concepts">1.0 - Basic CS and Programming Concepts</h2>
+<p>While you don't really <em>need</em> to know CS in order to code, it's very useful to understand the way your code works in the first place so you can better decide the best way to do what you want to do. Probably the most important things to have an understanding of is basic terminology and also how <strong>memory</strong> works.</p>
+<p>Examples for these concepts will be provided in pseudo-code (not actually real code) since this doesn't necessarily have to do with coding itself and is universal to any coding language.</p>
+<hr>
+
+<h3 id="11-terminology">1.1 - Terminology</h3>
+<ul>
+<li><strong>Programming language:</strong> A language used to write programs (wow)<ul>
+<li><strong>Compiled language:</strong> A programming language that is made to be directly ran by the computer itself; instructions for the computer</li>
+<li><strong>Interpreted language:</strong> Also called a scripting language. A programming language that is made to be run by a separate program (the interpreter); instructions for another program</li>
+</ul>
+</li>
+<li><strong>High/low level language:</strong> The further a language is away from directly interacting with the computer, the higher level it is. Scripting languages are generally high level since they interact with a program that interacts with the computer instead of just interacting with the computer</li>
+<li><strong>Variable:</strong> Something that stores a value, concept from algebra</li>
+<li><strong>Data types:</strong> The different types of information that can be stored in a variable. These can be simple values like numbers, letters, and words (primitive data types) or more complicated structures<ul>
+<li><strong>Complex data type:</strong> A data type that holds multiple values within it</li>
+</ul>
+</li>
+<li><strong>Function:</strong> Something that (generally) can take inputs (parameters), run some code, and return outputs, concept from algebra<ul>
+<li><strong>Void function:</strong> A function that doesn't give an output</li>
+</ul>
+</li>
+<li><strong>Bit:</strong> The smallest unit of stored information; a single binary digit (0 or 1). Most values are encoded as multiple bits, usually powers of 2.</li>
+</ul>
+<p>There is some more terminology but that will be explained within the rest of the doc sections!!</p>
+<hr>
+
+<h3 id="12-memory-basics">1.2 - Memory Basics</h3>
+<p>Memory is what a computer uses to store information. All information is stored as binary values, which basically every language will automatically do for you. Say you were to have some code like this:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>x = 10
+</span></code></pre></div>
+In this example, <code>x</code> is a variable set to the value <code>10</code>. Wow! When this is executed, some memory is <strong>allocated</strong> (reserved) for <code>x</code>, and is filled in with the binary value for <code>10</code>. Wherever this memory is allocated is called the <strong>memory address</strong>. Variables generally can fill their allocated memory with a new value, allowing it to change over time:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>x = 10
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>x = 20
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>x = 5
+</span></code></pre></div></p>
+<p>Generally, variables will always allocate their own memory, so if you set one variable to be equal to another variable:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>x = 10
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>y = x
+</span></code></pre></div>
+then they will both have different memory addresses. This means that if <code>x</code> were to be changed to a different value in this example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>x = 10
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>y = x
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>x = 5
+</span></code></pre></div>
+then <code>y</code> would still remain <code>10</code> even though it was set to <code>x</code> which is now <code>5</code>; instead of copying <code>x</code> itself it copies whatever <code>x</code> is currently equal to. There are, however, <strong>reference</strong> variables which do refer to the exact memory address of another variable, effectively making it so it changes with it:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>x = 10
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>y references x
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>x = 5
+</span></code></pre></div>
+in this example, <code>y</code>, like <code>x</code>, will start out as <code>10</code> and be changed to <code>5</code>. Most higher-level languages will not use references unless it is for more complicated data types than just numbers.</p>
+<p>Memory is physically stored, so there is a limit to how much can be stored. You will generally never hit this limit on a modern computer unless you REALLY fuck up, but generally the less you have available the slower everything is, so you want to avoid keeping useless memory allocated. When useless memory is kept allocated, it is called a <strong>memory leak</strong>. Scripting languages typically have <strong>garbage collectors</strong> that detect when memory is 100% not used and won't be used and automatically deallocates it, doing most of the job for you.</p>
+<hr>
+
+<h3 id="13-data-types">1.3 - Data Types</h3>
+<p>Data is always stored in the same binary format, so the computer uses its data type to know how to understand it. Different data types will require more or less memory to store information. The most common data types are:</p>
+<ul>
+<li><strong>Int(integer):</strong> A positive or negative whole number</li>
+<li><strong>Float(ing point):</strong> A number that can have a decimal<ul>
+<li><strong>Double:</strong> A float that uses twice the information, so it can store bigger numbers</li>
+</ul>
+</li>
+<li><strong>Bool(ean):</strong> A binary value, usually represented as being either <code>true</code> or <code>false</code></li>
+<li><strong>Str(ing):</strong> Any text/characters. Typically represented by wrapping it between <code>""</code> or <code>''</code>. Strings might sometimes look like other value types (e.g. <code>"true"</code> or <code>"5"</code>) but they are treated just as any other string</li>
+<li><strong>Null:</strong> Called <code>nil</code> in lua, just represents there being no value at all</li>
+</ul>
+<p>A language that is <strong>strongly typed</strong> will require you to manually define the type of a variable. Many scripting languages aren't, and instead automatically assume it based on the value.</p>
+<p>There are more complex data types, but these generally depend on the language itself. The most common one that is practically universal between languages is the <strong>array</strong>. An array is essentially an ordered list of multiple values. Most languages are <strong>0-index</strong>, meaning that the first value stored in an array is treated like the 0th value, but Lua (what Roblox uses) is <strong>1-index</strong>, meaning that the first value is treated as the 1st. Here is an example of the way an array works in a 1-index language:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>a = [5, &quot;something&quot;, false]
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>x = a[1]
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>y = a[2]
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>z = a[3]
+</span></code></pre></div>
+In this example, <code>a</code> is set to an array containing the values <code>5</code> (an int), <code>"something"</code> (a string), and <code>false</code> (a bool). <code>x</code> is then set to the <code>1</code>st element of the array (<code>5</code>), <code>y</code> to the <code>2</code>nd (<code>"something"</code>), <code>z</code> to the <code>3</code>rd (<code>false</code>). This process of referring to a specific value within a complex data structure is called <strong>indexing</strong>.</p>
+<hr>
+
+<h3 id="14-functions">1.4 - Functions</h3>
+<p>A function can generally take in any number of inputs (parameters) and return any number of outputs. Functions can also store code within them that runs whenver the function is called (used). Whatever values are passed into the function (arguments) will fill in the values of the parameters. Might not have been the simplest way to explain it but an example should clear stuff up (using Lua for the example this time):
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">-- In lua, doing -- makes the rest of the line a comment. You can write anything in a comment and it won&#39;t run</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kr">function</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="nv">number1</span><span class="p">,</span><span class="w"> </span><span class="nv">number2</span><span class="p">)</span><span class="w"> </span><span class="c1">-- All the code between here and &#39;end&#39; will run when the funciton is called</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="c1">-- The parameters are &#39;number1&#39; and &#39;number2&#39;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">number1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">number2</span><span class="w"> </span><span class="c1">-- &#39;local&#39; basically means in Lua that this is a new variable and not just changing the value of one that already exists</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nv">sum</span><span class="w"> </span><span class="c1">-- Returning values ends the function immedeately and gives it a value</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="kr">end</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="kd">local</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="c1">-- The arguments here are 5 and 7. This means that when &#39;add&#39; is called this time, the parameter number1 will be 5 and the parameter number2 will be 7. This will make the sum variable 5+7 and thus 12 will be returned. x is set to the return value, so x is now 12</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="hll"><span class="kd">local</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="c1">-- Figure out what the arguments are, what &#39;sum&#39; will be equal to in this case, what gets returned, and what y is equal to`</span>
+</span></span></code></pre></div></p>
+<details>
+<summary>The arguments are:</summary>
+8 and 9, meaning that when add is called in the highlighted line, number1 will equal 8 and number2 will equal 9
+
+</details>
+
+<details>
+<summary>The value returned is:</summary>
+17. sum is set to equal number1 (8) + number2 (9) which is 17. sum is then returned
+</details>
+
+<details>
+<summary>y will be equal to:</summary>
+16. y is set to equal the return value of add(8, 9) - 1. The return value is 17, and 17 - 1 is 16.
+</details>
+
+<p>Most programming languages come with many built-in functions. The <code>print</code> function will log any arguments into the program's output.
+<div class="language-lua highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;something&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="o">-</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span>
+</span></code></pre></div>
+<strong>Output</strong>:</p>
+<blockquote>
+<p>"something"  -14  false</p>
+</blockquote>
+<hr>
+
+<h3 id="15-operations">1.5 - Operations</h3>
+<p>Operations are pretty simple. The symbols for operations are almost entirely the same between languages, but there are some differences and I will be using the way they are done in lua. In lua, the value types <strong>number</strong> (int, float, and double are all treated as one type in lua), <strong>string</strong>, and <strong>boolean</strong> all have unique operations, and there are some operations that are universal to all data types. They are all generally straightforwards, although boolean operations are somewhat difficult.</p>
+<p><strong>Universal operations:</strong></p>
+<ul>
+<li>Equality: <code>a == b</code> outputs <code>true</code> if the values are equivilent and <code>false</code> otherwise<ul>
+<li><code>5 == 3</code> outputs <code>false</code></li>
+</ul>
+</li>
+<li>Unequality: <code>a ~= b</code> outputs <code>true</code> if the values are not the same and <code>false</code> otherwise<ul>
+<li><code>5 ~= 3</code> outputs <code>true</code></li>
+</ul>
+</li>
+<li>If these are used with complex data types, it will compare their memory addresses instead of the values themselves</li>
+</ul>
+<p><strong>Numerical operations (arithmetic):</strong></p>
+<ul>
+<li>Addition: <code>a + b</code> outputs the sum of the two numbers<ul>
+<li><code>5 + 3</code> outputs <code>8</code></li>
+</ul>
+</li>
+<li>Subtraction: <code>a - b</code> outputs the difference of the two numbers<ul>
+<li><code>5 - 3</code> outputs <code>2</code></li>
+</ul>
+</li>
+<li>Multiplication: <code>a * b</code> outputs the product of the two numbers<ul>
+<li><code>5 * 3</code> outputs <code>15</code></li>
+</ul>
+</li>
+<li>Division: <code>a / b</code> outputs the quotient of the two numbers<ul>
+<li><code>5 / 3</code> outputs <code>1.66666666666...</code></li>
+</ul>
+</li>
+<li>Exponentiation: <code>a ^ b</code> outputs <code>a</code> to the power of <code>b</code><ul>
+<li><code>5 ^ 3</code> outputs <code>125</code></li>
+</ul>
+</li>
+</ul>
+<p>These all follow the standard order of operations. Parentheses can be used.</p>
+<p><strong>Numerical operations (Inequalities):</strong></p>
+<ul>
+<li>Greater than or equal to: <code>a &gt;= b</code> outputs <code>true</code> if <code>a</code> is greater than or equal to <code>b</code> and <code>false</code> otherwise<ul>
+<li><code>5 &gt;= 3</code> outputs <code>true</code></li>
+</ul>
+</li>
+<li>Less than or equal to: <code>a &lt;= b</code> outputs <code>true</code> if <code>a</code> is less than or equal to <code>b</code> and <code>false</code> otherwise<ul>
+<li><code>5 &lt;= 3</code> outputs <code>false</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>String operations (there's really only one):</strong></p>
+<ul>
+<li>Concatination: <code>a .. b</code> combines the two strings into one<ul>
+<li><code>"combined ".."words"</code> outputs <code>"combined words"</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="151-boolean-operations">1.5.1 - Boolean Operations</h3>
+<p>These get their own sections because they're kind of complicated. Boolean operations can actually be used on any data type, not just booleans. However, they are based on boolean math and treat data types as if they were either <code>true</code> or <code>false</code> even if they are not booleans. If a data type is treated as being <code>true</code> it is <strong>truthy</strong> and if it is treated as being false it is <strong>falsey</strong>. In lua, all data types are truthy except <code>false</code> and <code>nil</code>.</p>
+<ul>
+<li><code>a and b</code> outputs <code>b</code> if <code>a</code> is truthy, otherwise outputs <code>a</code><ul>
+<li><code>true and 5</code> outputs <code>5</code></li>
+<li><code>false and 3</code> outputs <code>false</code></li>
+<li><code>nil and false</code> outputs <code>nil</code></li>
+</ul>
+</li>
+<li><code>a or b</code> outputs <code>a</code> if <code>a</code> is truthy, otherwise outputs <code>b</code><ul>
+<li><code>true or 5</code> outputs <code>true</code></li>
+<li><code>false or 3</code> outputs <code>3</code></li>
+<li><code>nil or false</code> outputs <code>false</code></li>
+</ul>
+</li>
+<li><code>not a</code> outputs <code>false</code> if <code>a</code> is truthy, otherwise outputs <code>true</code><ul>
+<li><code>not true</code> output <code>false</code></li>
+<li><code>not 5</code> outputs <code>false</code></li>
+<li><code>not nil</code> outputs <code>true</code></li>
+<li><code>not false</code> outputs <code>true</code></li>
+<li><code>not not 2</code> outputs <code>true</code></li>
+</ul>
+</li>
+</ul>
+<p>Now try to see if you can figure out these values!</p>
+<details>
+<summary>5 and 3</summary>
+3
+</details>
+<details>
+<summary>2 or 3</summary>
+2
+</details>
+<details>
+<summary>5*5 or 1</summary>
+25
+</details>
+<details>
+<summary>nil and 2*2</summary>
+nil
+</details>
+<details>
+<summary>true and "wow" or "woah"</summary>
+"wow"
+</details>
+<details>
+<summary>(not true) and "wow" or (not not "woah")</summary>
+true
+</details>
+<details>
+<summary>5 == 3 and "meow" or 3 == 2 and "what" or 2*2 == 2^2 and "kazi is so pretty"</summary>
+"kazi is so pretty"
+</details>
+
+<hr>
+
+<p>That's it for all the computer science/math based stuff! Wow! You did it! Yay! More coming soon!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -20,7 +20,7 @@ In lua, you can simplify ``x = x + 1`` as ``x += 1``. This applies for all opera
 There are ternary operators in lua. They look similar to if statements, but they are NOT if statements, and instead of running code, they just select values. All ternary operations can be represented with boolean operations (``and``/``or``) but they are typically easier to follow along:
 ```lua
 local person = "Kazi"
-local description = if person == "Kazi" then "So so pretty and cute the best #1 etc" elseif person == "Calla" then "Alright I guess..." else "Mid"
+local description = if person == "Kazi" then "So so pretty and cute the best #1 etc" elseif person == "that optimizer guy" then "Ugly as shit" else "Mid"
 ```
 <details>
 <summary>What is decription equal to?</summary>
